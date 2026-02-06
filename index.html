@@ -1,4 +1,49 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rose Day 🌹</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', cursive; }
+
+
+body {
+height: 100vh;
+background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.container {
+text-align: center;
+color: #7a0026;
+z-index: 2;
+animation: fadeIn 2s ease-in-out;
+}
+
+
+h1 { font-size: 3rem; margin-bottom: 20px; }
+
+
+.bouquet { font-size: 5rem; animation: float 3s ease-in-out infinite; }
+
+
+p { font-size: 1.4rem; margin: 20px 0; }
+
+
+.hearts { font-size: 1.6rem; }
+
+
+button {
+margin-top: 25px;
+padding: 12px 30px;
+font-size: 1.2rem;
+background: #ff4d6d;
+border: none;
 border-radius: 30px;
 color: white;
 cursor: pointer;
@@ -7,16 +52,12 @@ transition: transform 0.3s ease;
 }
 
 
-button:hover {
-transform: scale(1.1);
-}
+button:hover { transform: scale(1.1); }
 
 
-/* Falling petals */
 .petal {
 position: absolute;
 top: -50px;
-color: #ff4d6d;
 font-size: 1.5rem;
 animation: fall linear infinite;
 opacity: 0.8;
@@ -24,13 +65,11 @@ opacity: 0.8;
 
 
 @keyframes fall {
-0% { transform: translateY(0) rotate(0deg); }
-100% { transform: translateY(110vh) rotate(360deg); }
+to { transform: translateY(110vh) rotate(360deg); }
 }
 
 
 @keyframes float {
-0%, 100% { transform: translateY(0); }
 50% { transform: translateY(-15px); }
 }
 
@@ -67,4 +106,5 @@ document.body.appendChild(petal);
 
 
 </body>
+
 </html>
